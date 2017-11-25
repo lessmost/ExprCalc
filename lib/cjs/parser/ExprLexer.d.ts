@@ -1,0 +1,32 @@
+import { ATN } from 'antlr4ts/atn/ATN';
+import { CharStream } from 'antlr4ts/CharStream';
+import { Lexer } from 'antlr4ts/Lexer';
+import { Vocabulary } from 'antlr4ts/Vocabulary';
+export declare class ExprLexer extends Lexer {
+    static readonly MUL: number;
+    static readonly DIV: number;
+    static readonly ADD: number;
+    static readonly SUB: number;
+    static readonly LPAREN: number;
+    static readonly RPAREN: number;
+    static readonly ID: number;
+    static readonly INT: number;
+    static readonly EQ: number;
+    static readonly SEMI: number;
+    static readonly COMMENT: number;
+    static readonly WS: number;
+    static readonly modeNames: string[];
+    static readonly ruleNames: string[];
+    private static readonly _LITERAL_NAMES;
+    private static readonly _SYMBOLIC_NAMES;
+    static readonly VOCABULARY: Vocabulary;
+    readonly vocabulary: Vocabulary;
+    constructor(input: CharStream);
+    readonly grammarFileName: string;
+    readonly ruleNames: string[];
+    readonly serializedATN: string;
+    readonly modeNames: string[];
+    static readonly _serializedATN: string;
+    static __ATN: ATN;
+    static readonly _ATN: ATN;
+}
