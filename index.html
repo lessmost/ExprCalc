@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./dist/my-expr-lib.js"></script>
+</head>
+
+<div>
+    <h2>请输入Expr语言代码：</h2>
+    <textarea id="code" rows="25" cols="128">
+// 变量 
+a = 2;
+b=9;
+c = a 
+    + 3;
+d =b-(c *5);
+
+// 打印
+a;
+b;
+c;
+d;
+    </textarea>
+</div>
+
+<div>
+    <button id="run">运行</button>
+    <button id="trans">前缀翻译</button>
+</div>
+
+<div>
+    <h2>运行结果</h2>
+    <textarea id="result" rows="5" cols="128" disabled></textarea>
+</div>
+
+<body>
+    <script>
+        function execute() {
+            var text = document.getElementById('code').value;
+            var result = MyExpr.execute(text);
+            console.log(result);
+            document.getElementById('result').value = result;
+        }
+        function translate() {
+            var text = document.getElementById('code').value;
+            var result = MyExpr.translate(text);
+            console.log(result);
+            document.getElementById('result').value = result;
+        }
+        document.getElementById('run').addEventListener('click', execute);
+        document.getElementById('trans').addEventListener('click', translate);
+    </script>
+</body>
+
+</html>
