@@ -1,6 +1,3 @@
-## Instructions
+## Build Your Expr Language with ANTLR v4
 
-- build: ```npm run build```
-- test: ```npm run test```
-- code coverage: ```npm run coverage```
-
+[Demo](https://zqlu.github.io/ExprCalc/)
